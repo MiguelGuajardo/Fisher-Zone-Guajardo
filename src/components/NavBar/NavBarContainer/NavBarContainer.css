@@ -1,0 +1,24 @@
+.NavbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0 2%;
+}
+.sectionLogo {
+  display: flex;
+  width: 220px;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.fishingZoneLogo {
+  width: 68px;
+  height: 68px;
+}
+.ListaCuenta {
+  display: none;
+}
+.sectionCarrito {
+  cursor: pointer;
+}

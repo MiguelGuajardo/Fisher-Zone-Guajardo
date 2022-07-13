@@ -1,0 +1,21 @@
+.NavBarList {
+  background-color: #303030;
+}
+.List {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: space-around;
+}
+.NavItem {
+  display: flex;
+  align-items: center;
+  margin: 0.5vh 0;
+  font-size: 2vh;
+}
+.ListItems {
+  display: none;
+}
+.NavItem {
+  cursor: pointer;
+}
