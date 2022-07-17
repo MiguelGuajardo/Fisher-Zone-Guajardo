@@ -2,7 +2,7 @@ import "./NavBarContainer.css";
 import fisherZoneLogo from "../../../img/fishingZoneLogo.jpg";
 import TextField from "@mui/material/TextField";
 import PersonIcon from "@mui/icons-material/Person";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import CartWidget from "../../CartWidget/CartWidget";
 
 export default function NavbarContainer() {
   return (
@@ -24,19 +24,13 @@ export default function NavbarContainer() {
         />
       </div>
       <div className="sectionCuenta">
-        <div className="DesplegarLista">
-          <PersonIcon />
-          <p>Mi Cuenta</p>
-          <ul className="ListaCuenta">
-            <li>Crear Cuenta</li>
-            <li>Iniciar Sesión</li>
-          </ul>
-        </div>
+        <PersonIcon />
+        <ul className="ListaCuenta">
+          <li>Crear Cuenta</li>
+          <li>Iniciar Sesión</li>
+        </ul>
       </div>
-      <div className="sectionCarrito">
-        <ShoppingCartIcon />
-        <p>Mi Carrito</p>
-      </div>
+      <CartWidget />
     </div>
   );
 }

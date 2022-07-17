@@ -1,0 +1,30 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style: none;
+}
+.sectionCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 50px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.IconCarrito {
+  width: 50%;
+  height: 50%;
+  transform: scale(1, 1);
+}
+.sectionCarrito:hover .IconCarrito {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2, 1.2);
+}
+.sectionCarrito:hover .NameCarrito {
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}

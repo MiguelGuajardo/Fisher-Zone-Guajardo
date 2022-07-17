@@ -1,3 +1,9 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style: none;
+}
 .TopBar {
   display: flex;
   justify-content: center;
@@ -45,6 +51,10 @@
 .iconWhatSapp:hover {
   background-color: #1df22f;
   outline-color: #1df22f;
+}
+.iconFacebook:hover {
+  background-color: #285aeb;
+  outline-color: #285aeb;
 }
 .iconGitHub:hover {
   background-color: #2ea44f;

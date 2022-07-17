@@ -8,15 +8,16 @@ export default function NavBarList() {
         <li className="NavItem">Inicio</li>
         <li className="NavItem">
           Pesca
+          <KeyboardArrowDownIcon />
           <ul className="ListItems">
             <li>Cañas</li>
             <li>Reels</li>
             <li>Accesorios</li>
           </ul>
-          <KeyboardArrowDownIcon />
         </li>
         <li className="NavItem">
           Camping
+          <KeyboardArrowDownIcon />
           <ul className="ListItems">
             <li>Mochilas</li>
             <li>Carpas</li>
@@ -24,16 +25,15 @@ export default function NavBarList() {
             <li>Linternas</li>
             <li>Accesorios</li>
           </ul>
-          <KeyboardArrowDownIcon />
         </li>
         <li className="NavItem">
           Playa
+          <KeyboardArrowDownIcon />
           <ul className="ListItems">
             <li>Reposeras y Sillones</li>
             <li>Sombrillas</li>
             <li>Conservadoras</li>
           </ul>
-          <KeyboardArrowDownIcon />
         </li>
         <li className="NavItem">Contacto</li>
       </ul>

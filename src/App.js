@@ -1,10 +1,22 @@
 import "./App.css";
-import ResponsiveAppBar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import SectionCategory from "./components/SectionCategory/SectionCategory";
+import SectionDescription from "./components/SectionDescription/SectionDescription";
 
 function App() {
   return (
     <div className="App">
-      <ResponsiveAppBar />
+      <NavBar />
+      <div className="Sections">
+        <SectionCategory />
+        <div className="SectionItemListContainer">
+          <ItemListContainer />
+        </div>
+        <div className="SectionDescription">
+          <SectionDescription />
+        </div>
+      </div>
     </div>
   );
 }

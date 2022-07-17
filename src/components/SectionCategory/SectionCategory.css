@@ -1,0 +1,10 @@
+.SectionCategory {
+  display: flex;
+  width: 18%;
+  flex-direction: column;
+  align-items: center;
+}
+.ItemCategory {
+  cursor: pointer;
+  margin-bottom: 12px;
+}

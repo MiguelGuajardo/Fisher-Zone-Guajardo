@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;700&family=Open+Sans:wght@400;500;700&display=swap");
+.SectionDescription {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+  height: 100%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  justify-content: center;
+}
+.sectionDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SectionDescription img {
+  width: 220px;
+  margin-top: 1rem;
+}
+.ListContainer {
+  display: flex;
+  flex-direction: column;
+}
+.SizeList {
+  list-style: none;
+  padding: 10px 0;
+  margin: 15px 0;
+  width: 20%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.SizeList div {
+  transition: all 0.5s 0.1s;
+}
+.SizeList li {
+  text-align: center;
+  display: none;
+  padding: 0;
+  width: 100%;
+}
+.SizeList li:nth-child(1) {
+  display: block;
+}
+.SizeList:hover li {
+  display: block;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+}
+.Size:hover {
+  background-color: rgb(39, 134, 243);
+}
+.Description {
+  font-family: "Edu NSW ACT Foundation", cursive;
+}
+.BuyButton {
+  cursor: pointer;
+  color: #fff;
+  background-color: #f26250;
+  padding: 1em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+.BuyButton:hover {
+  color: #f26250;
+  background-color: #fff;
+}
