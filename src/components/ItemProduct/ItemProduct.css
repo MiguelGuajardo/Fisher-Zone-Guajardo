@@ -7,7 +7,7 @@
 .ItemProduct {
   background-color: transparent;
   width: 250px;
-  height: 300px;
+  height: 330px;
   perspective: 1000px;
 }
 .flip-card-inner {
@@ -53,6 +53,7 @@
   cursor: pointer;
   color: #fff;
   background-color: #f26250;
+  margin-top: 35px;
   padding: 1em;
   border: 1px solid;
   border-radius: 6px;

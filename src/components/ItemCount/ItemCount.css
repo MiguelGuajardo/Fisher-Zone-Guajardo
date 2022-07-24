@@ -1,0 +1,17 @@
+.ItemCount {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.btn {
+  width: 30px;
+  height: 30px;
+}
+.h2Contador {
+  width: 30px;
+  height: 30px;
+}
+.btnRemove:disabled {
+  background-color: #cccccc;
+  color: #666666;
+}
