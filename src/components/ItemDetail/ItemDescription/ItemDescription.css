@@ -1,0 +1,36 @@
+.TitleDescription {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.PriceDescription {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.BuyContainer {
+  display: flex;
+  align-items: center;
+}
+.ItemCount {
+  margin: 0 2rem 0 0;
+}
+.BuyCard {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.BuyButton {
+  cursor: pointer;
+  color: #fff;
+  background-color: #f26250;
+  padding: 1em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+.BuyButton:hover {
+  color: #f26250;
+  background-color: #fff;
+}

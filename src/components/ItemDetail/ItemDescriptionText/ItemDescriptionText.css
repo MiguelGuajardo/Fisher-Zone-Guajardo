@@ -1,0 +1,11 @@
+.ListDescriptionText {
+  display: flex;
+  flex-direction: column;
+}
+.Description {
+  display: flex;
+  align-items: center;
+}
+.TextDescription {
+  font-size: 2rem;
+}

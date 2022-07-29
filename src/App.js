@@ -1,22 +1,22 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import SectionCategory from "./components/SectionCategory/SectionCategory";
-import SectionDescription from "./components/SectionDescription/SectionDescription";
+//import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+//import SectionCategory from "./components/SectionCategory/SectionCategory";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <div className="Sections">
-        <SectionCategory />
-        <div className="SectionItemListContainer">
-          <ItemListContainer />
-        </div>
-        <div className="SectionDescription">
-          <SectionDescription />
-        </div>
-      </div>
+      {
+        //<div className="Sections">
+        //<SectionCategory />
+        //<div className="SectionItemListContainer">
+        //  <ItemListContainer />
+        //</div>
+        //</div>
+      }
+      <ItemDetailContainer />
     </div>
   );
 }

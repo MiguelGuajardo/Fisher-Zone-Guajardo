@@ -1,0 +1,22 @@
+.ItemImageContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.ItemImageMin {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  margin: 0 10px;
+}
+.ImageDetailMin {
+  width: 10vh;
+  margin: 20px;
+  cursor: pointer;
+}
+.ImageDetail {
+  cursor: pointer;
+  width: 40rem;
+}
