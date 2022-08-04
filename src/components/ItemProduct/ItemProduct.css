@@ -20,6 +20,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .flip-card-inner div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -50,10 +53,8 @@
 }
 
 .ButtonVerMas {
-  cursor: pointer;
   color: #fff;
   background-color: #f26250;
-  margin-top: 35px;
   padding: 1em;
   border: 1px solid;
   border-radius: 6px;
@@ -62,6 +63,7 @@
   transition: background-color 0.3s;
 }
 .ButtonVerMas:hover {
+  cursor: pointer;
   color: #f26250;
   background-color: #fff;
 }

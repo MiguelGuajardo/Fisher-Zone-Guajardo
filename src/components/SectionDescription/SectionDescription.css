@@ -43,7 +43,6 @@
 }
 .SizeList:hover li {
   display: block;
-  cursor: pointer;
   border-bottom: 1px solid #000;
 }
 .Size:hover {
@@ -53,7 +52,6 @@
   font-family: "Edu NSW ACT Foundation", cursive;
 }
 .BuyButton {
-  cursor: pointer;
   color: #fff;
   background-color: #f26250;
   padding: 1em;

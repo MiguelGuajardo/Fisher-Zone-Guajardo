@@ -1,22 +1,29 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-//import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-//import SectionCategory from "./components/SectionCategory/SectionCategory";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Detail from "./pages/Detail";
+import Error404 from "./pages/Error404";
+import Camping from "./pages/Camping";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      {
-        //<div className="Sections">
-        //<SectionCategory />
-        //<div className="SectionItemListContainer">
-        //  <ItemListContainer />
-        //</div>
-        //</div>
-      }
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:sectionId" element={<Products />} />
+          <Route path="/:sectionId/:categoryId" element={<Products />} />
+          <Route path="/:sectionId/:categoryId/:id" element={<Detail />} />
+          <Route path="/:sectionId" element={<Camping />} />
+          <Route path="/Contacto" element={<h2>Contacto</h2>} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,20 +1,14 @@
 import "./ItemImageContainer.css";
-const ItemImageContainer = ({ image }) => {
+const ItemImageContainer = ({ image, name }) => {
   return (
     <div className="ItemImageContainer">
       <div className="ItemImageMin">
-        <img
-          className="ImageDetailMin"
-          src={`../../..${image}`}
-          alt="Caña Lexus Chaiten"
-        />
+        <img className="ImageDetailMin" src={`../../..${image}`} alt={name} />
+        <img className="ImageDetailMin" src={`../../..${image}`} alt={name} />
+        <img className="ImageDetailMin" src={`../../..${image}`} alt={name} />
       </div>
       <div className="ItemImage">
-        <img
-          className="ImageDetail"
-          src={`../../..${image}`}
-          alt="Caña Lexus Chaiten"
-        />
+        <img className="ImageDetail" src={`../../..${image}`} alt={name} />
       </div>
     </div>
   );

@@ -2,9 +2,20 @@
   display: flex;
   width: 18%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 180px;
+}
+
+.SectionCategory * {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
 }
 .ItemCategory {
-  cursor: pointer;
   margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+ul.ItemListCategory {
+  margin: 22px;
+  padding-left: 9px;
 }

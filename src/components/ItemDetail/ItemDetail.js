@@ -7,7 +7,7 @@ const ItemDetail = ({ data }) => {
   return (
     <div className="ItemContainer">
       <div className="ItemDetail">
-        <ItemImageContainer image={image} />
+        <ItemImageContainer name={name} image={image} />
         <div className="ItemDescription">
           <ItemDescription name={name} price={price} stock={stock} />
         </div>

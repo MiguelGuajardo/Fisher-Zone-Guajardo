@@ -16,14 +16,10 @@
   width: 220px;
   align-items: center;
   font-size: 24px;
-  cursor: pointer;
 }
 .fishingZoneLogo {
   width: 68px;
   height: 68px;
-}
-.sectionCarrito {
-  cursor: pointer;
 }
 .DesplegarLista ul {
   list-style: none;
@@ -39,7 +35,6 @@
   border-top-right-radius: 4px;
   line-height: 45px;
   text-align: center;
-  cursor: pointer;
   color: #fff;
   background-color: #000;
 }
@@ -83,4 +78,7 @@
 }
 .sectionCuenta:hover .ListaCuenta li {
   animation: animation 0.5s forwards;
+}
+.NavbarContainer * {
+  text-decoration: none;
 }

@@ -2,15 +2,15 @@ import "./ItemDetailContainer.css";
 import { useState, useEffect } from "react";
 import products from "../../Utils/products.mock";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {
   const [productData, setProductData] = useState([]);
   const [ProductFilterId, setProductFilterId] = useState([]);
 
+  const { id } = useParams();
   const getProduct = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(products);
-    }, 2000);
+    resolve(products);
   });
 
   useEffect(() => {
@@ -25,17 +25,24 @@ export default function ItemDetailContainer() {
       .finally(() => {});
   }, []);
   useEffect(() => {
+    FilterById();
+  });
+  console.log("producto filtrado: ", ProductFilterId);
+  const FilterById = () => {
     productData.some((product) => {
-      if (product.id == 1) {
+      if (product.id == id) {
         /*console.log("producto filtrado: ", product);*/
         setProductFilterId(product);
       }
     });
-  });
-  console.log("producto filtrado: ", ProductFilterId);
+  };
   return (
     <div>
-      <ItemDetail data={ProductFilterId} />
+      {ProductFilterId ? (
+        <ItemDetail data={ProductFilterId}></ItemDetail>
+      ) : (
+        <div>Cargando...</div>
+      )}
     </div>
   );
 }

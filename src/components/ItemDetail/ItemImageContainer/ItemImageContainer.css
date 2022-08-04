@@ -14,9 +14,7 @@
 .ImageDetailMin {
   width: 10vh;
   margin: 20px;
-  cursor: pointer;
 }
 .ImageDetail {
-  cursor: pointer;
   width: 40rem;
 }
