@@ -28,3 +28,31 @@
   transition: all 0.3s ease-in-out;
   font-weight: bold;
 }
+.item-cart-product {
+  z-index: 301;
+}
+.item-cart-product {
+  border: 1px solid #fff;
+  border-radius: 12px;
+  display: flex;
+  margin: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+.deleteItem {
+  color: red;
+}
+.sizeDetailItem {
+  font-size: 1.3rem;
+}
+.imageCartItem {
+  width: 6rem;
+  height: 6rem;
+}
+.alignCart {
+  text-align: center;
+}
+div a {
+  text-decoration: none;
+  color: #000;
+}

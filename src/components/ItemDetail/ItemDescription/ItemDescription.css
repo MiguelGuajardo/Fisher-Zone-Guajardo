@@ -33,3 +33,10 @@
   color: #f26250;
   background-color: #fff;
 }
+.alignContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}

@@ -1,0 +1,38 @@
+.checkOutContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+.checkOutTitles {
+  display: flex;
+  justify-content: space-around;
+  margin: 34px 0;
+}
+.checkOutDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+  border: 1px solid #000;
+}
+.imageCheckOut {
+  width: 9rem;
+  height: 9rem;
+}
+.detailContainer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 27rem;
+}
+.detailFontSize {
+  font-size: 1.5rem;
+}
+.checkOutContainer a {
+  text-decoration: none;
+  color: #000;
+}

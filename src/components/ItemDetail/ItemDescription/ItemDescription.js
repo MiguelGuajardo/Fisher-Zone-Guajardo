@@ -4,7 +4,8 @@ import ItemCount from "../../ItemCount/ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ItemDescription = ({ name, price, stock }) => {
+const ItemDescription = ({ data }) => {
+  const { name, price, stock } = data;
   const Cuotas = price / 3;
   const [qtySelected, setQtySelected] = useState(0);
   return (
@@ -23,7 +24,12 @@ const ItemDescription = ({ name, price, stock }) => {
             <button className="BuyButton">TERMINAR COMPRA</button>
           </Link>
         ) : (
-          <ItemCount setQtySelected={setQtySelected} stock={stock} />
+          <ItemCount
+            setQtySelected={setQtySelected}
+            stock={stock}
+            count={qtySelected}
+            productData={data}
+          />
         )}
       </div>
     </>

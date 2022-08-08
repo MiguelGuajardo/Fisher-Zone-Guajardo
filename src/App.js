@@ -8,23 +8,26 @@ import Detail from "./pages/Detail";
 import Contacto from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import Error404 from "./pages/Error404";
+import CartProvider from "./context/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/:sectionId" element={<Products />} />
-          <Route path="/:sectionId/:categoryId" element={<Products />} />
-          <Route path="/:sectionId/:categoryId/:id" element={<Detail />} />
-          <Route path="/Contacto" element={<Contacto />} />
-          <Route path="/Cart" element={<Checkout />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:sectionId" element={<Products />} />
+            <Route path="/:sectionId/:categoryId" element={<Products />} />
+            <Route path="/:sectionId/:categoryId/:id" element={<Detail />} />
+            <Route path="/Contacto" element={<Contacto />} />
+            <Route path="/Cart" element={<Checkout />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
