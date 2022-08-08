@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "../../Utils/products.mock";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import RenderItemDescription from "./RenderItemDescription/RenderItemDescription";
 
 const RenderItemDescriptionText = () => {
   const { id } = useParams();
@@ -16,16 +16,10 @@ const RenderItemDescriptionText = () => {
       }
     });
   };
-  console.log("Filter Id", productFilterId);
   return (
     <>
-      {productFilterId.map(function (product) {
-        return (
-          <li className="Description">
-            <ArrowRightIcon fontSize="large" />
-            <p className="TextDescription">{product} </p>
-          </li>
-        );
+      {productFilterId.map((product, index) => {
+        return <RenderItemDescription key={index} data={product} />;
       })}
     </>
   );

@@ -1,4 +1,3 @@
-import "./ItemDetailContainer.css";
 import { useState, useEffect } from "react";
 import products from "../../Utils/products.mock";
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -16,7 +15,6 @@ export default function ItemDetailContainer() {
   useEffect(() => {
     getProduct
       .then((res) => {
-        //console.log("Productos: ", res);
         setProductData(res);
       })
       .catch((error) => {
@@ -27,11 +25,9 @@ export default function ItemDetailContainer() {
   useEffect(() => {
     FilterById();
   });
-  console.log("producto filtrado: ", ProductFilterId);
   const FilterById = () => {
     productData.some((product) => {
       if (product.id == id) {
-        /*console.log("producto filtrado: ", product);*/
         setProductFilterId(product);
       }
     });
