@@ -29,8 +29,12 @@ export default function NavbarContainer() {
       <div className="sectionCuenta">
         <PersonIcon />
         <ul className="ListaCuenta">
-          <li>Crear Cuenta</li>
-          <li>Iniciar Sesión</li>
+          <Link to="/Cuenta/Register">
+            <li>Crear Cuenta</li>
+          </Link>
+          <Link to="/Cuenta/Login">
+            <li>Iniciar Sesión</li>
+          </Link>
         </ul>
       </div>
       <CartWidget />

@@ -1,0 +1,41 @@
+.accountContainer {
+  margin-top: 4%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.formContent {
+  background-color: #f4f4f4;
+  margin: 1% auto;
+  padding: 20px;
+  width: 30%;
+  border-radius: 12px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 17);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 0;
+}
+.inputForm {
+  width: 100%;
+  height: 2rem;
+}
+.createAccount:hover,
+.createAccount:focus {
+  color: coral;
+}
+.questionAccount:hover,
+.questionAccount:focus {
+  color: coral;
+}

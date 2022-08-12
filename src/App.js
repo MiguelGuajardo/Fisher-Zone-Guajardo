@@ -9,6 +9,7 @@ import Contacto from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import Error404 from "./pages/Error404";
 import CartProvider from "./context/CartContext";
+import Account from "./components/Account/Account";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/:sectionId/:categoryId" element={<Products />} />
             <Route path="/:sectionId/:categoryId/:id" element={<Detail />} />
             <Route path="/Contacto" element={<Contacto />} />
+            <Route path="/Cuenta/:Account" element={<Account />} />
             <Route path="/Cart" element={<Checkout />} />
             <Route path="*" element={<Error404 />} />
           </Routes>

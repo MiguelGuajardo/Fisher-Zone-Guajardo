@@ -1,3 +1,4 @@
+//----------CAÑAS
 import CañaLexusChaiten from "../img/CañaLexusChaiten.jpg";
 import CañaSpinitRainForestII from "../img/CañaSpinitRainForestII.jpg";
 import CañaSaintCarbonTech from "../img/CañaSaintCarbonTech.png";
@@ -8,20 +9,34 @@ import CañaKunnanSilverside from "../img/CañaKunnanSilverside.jpg";
 import CañaKunnanSilverside400 from "../img/CañaKunnanSilverside400.jpg";
 import CañaShimanoFxC60mc26 from "../img/CañaShimanoFxC60mc26.jpg";
 import CañaSpinitTornado from "../img/CañaSpinitTornado.png";
+//----------REELS
 import YukiStarSurf from "../img/YukiStarSurf.jpeg";
 import OkumaCeymarCxt65 from "../img/OkumaCeymarCxt65.jpg";
 import BobinaNylonMasterguilZ4 from "../img/BobinaNylonMasterguilZ4.jpg";
 import ReelRotativoHuevitoBanax from "../img/ReelRotativoHuevitoBanax.jpg";
+//----------ACCESORIOS PESCA
 import BobinaNylonMasterguilZ5TanzaMonofilamento from "../img/BobinaNylonMasterguilZ5TanzaMonofilamento.jpg";
 import ReelFrontalShimanoSiennaFg4000 from "../img/ReelFrontalShimanoSiennaFg4000.jpg";
 import CajadePescaColganteFlounder from "../img/CajadePescaColganteFlounder.jpg";
+//----------MOCHILAS
 import MochilaBambooAdventure70Lts from "../img/MochilaBambooAdventure70Lts.jpg";
+import MochilaSpinitTemuco24lts from "../img/MochilaSpinitTemuco24lts.jpg";
+import MochilaWaterdogCracco70lts from "../img/MochilaWaterdogCracco70lts.jpg";
+import MochilaDoiteCervino70Lts from "../img/MochilaDoiteCervino70Lts.jpg";
+//----------CARPAS
 import CarpaSpinitHolliday4P from "../img/CarpaSpinitHolliday4P.jpg";
+import CarpaBambooExpedition6p from "../img/CarpaBambooExpedition6p.jpg";
+//----------RECIPIENTES TÉRMICOS
 import VasoTérmicoWaterdogOlivera450 from "../img/VasoTérmicoWaterdogOlivera450.jpg";
+//----------LINTERNAS
 import LinternaSpinitHL800R from "../img/LinternaSpinitHL800R.jpg";
+//----------ACCESORIOS CAMPING
 import MultifunciónTrentoClassic8 from "../img/MultifunciónTrentoClassic8.jpg";
+//----------REPOSERAS Y SILLONES
 import SillóndeAluminioAlumelArt130AltoReforzadoTiras from "../img/SillóndeAluminioAlumelArt130AltoReforzadoTiras.jpg";
+//----------SOMBRILLAS
 import SombrilladeAluminioAlumel2MtsReclinable from "../img/SombrilladeAluminioAlumel2MtsReclinable.jpeg";
+//----------CONSERVADORAS
 import ConservadoraHelatodo28lts from "../img/ConservadoraHelatodo28lts.jpg";
 const products = [
   {
@@ -315,7 +330,7 @@ const products = [
     stock: 12,
   },
   {
-    id: 25,
+    id: 22,
     name: "Mochila Bamboo Adventure 70 Lts",
     image: MochilaBambooAdventure70Lts,
     price: 49900,
@@ -336,6 +351,66 @@ const products = [
       "Cubre mochila incorporada.",
     ],
     stock: 8,
+  },
+  {
+    id: 23,
+    name: "Mochila Spinit Temuco 24lts",
+    image: MochilaSpinitTemuco24lts,
+    price: 15050,
+    category: "Mochila",
+    section: "Camping",
+    description: [
+      "Peso aproximado: 0,76kg.",
+      "Material: Poliéster DOBBY 200D PU, resistente al agua.",
+      "Medidas: 45 x 32 x 19cm.",
+      "Dos compartimientos principales.",
+      "Bolsillo delantero.",
+      "Bolsillos laterales elastizados.",
+      "Correas laterales de compresión.",
+      "Cubremochilas en el bolsillo inferior; Color fluor variable.",
+    ],
+    stock: 5,
+  },
+  {
+    id: 24,
+    name: "Mochila Waterdog Cracco 70 lts",
+    image: MochilaWaterdogCracco70lts,
+    price: 44000,
+    category: "Mochila",
+    section: "Camping",
+    description: [
+      "Peso aproximado: 1,17 kg.",
+      "Material: POLYESTER DIAMOND RIPSTOP 200D + POLYESTER 600D.",
+      "Medidas: 35 x 27 x 75 cm.",
+      "Gran compartimento con acceso superior..",
+      "2 Compartimiento especial para bolsa y apertura para H O.",
+      "Dos bolsillos laterales.",
+      "Espaldar fijo de EVA extra confort recubierto con mesh.",
+      "Amplio cinturón con acolchado lumbar, con bolsillo.",
+      "Hombreras acolchadas con mesh.",
+      "Cintas compresoras laterales.",
+      "Cintas de pecho regulables.",
+      "Salida para sistema de audio.",
+      "Manija de agarre.",
+      "Cubre mochila.",
+    ],
+    stock: 7,
+  },
+  {
+    id: 25,
+    name: "Mochila Doite Cervino 70 Lts",
+    image: MochilaDoiteCervino70Lts,
+    price: 97690,
+    category: "Mochila",
+    section: "Camping",
+    description: [
+      "Peso aproximado: 2,7 kg.",
+      "Material: POLYESTER INTERIOR, NYLON EXTERIOR.",
+      "Medidas: 18 x 30 x 70 cm.",
+      "Gran compartimento con acceso superior..",
+      "2 Compartimiento especial para bolsa y apertura para H O.",
+    ],
+    stock: 9,
   },
   {
     id: 26,
@@ -359,6 +434,29 @@ const products = [
       "Cada habitacion mide 1,40 mts. ancho x 2,20 mts. largo x 1,50 mts. de alto.",
       "El comedor central mide 1,80 mts. ancho x 2,20 mts. largo x 1,90 mts. de alto.",
       "Incluye bolso de transporte.",
+    ],
+    stock: 5,
+  },
+  {
+    id: 27,
+    name: "Carpa Bamboo Expedition 6p",
+    image: CarpaBambooExpedition6p,
+    price: 57000,
+    category: "Carpa",
+    section: "Camping",
+    description: [
+      "2 ventanas en el Abside delantero.",
+      "Costuras termoselladas",
+      "Impermiabilidad 2000 mm.",
+      "Piso de polietileno de 200 grs/m2.",
+      "Varillas de fibra de vidrio.",
+      "Respirador trasero.",
+      "Altura: 1.90 mts.",
+      "Largo: 4.40 mts.",
+      "Ancho: 3.20 mts.",
+      "Peso: 9.30 kg.",
+      "Apertura lateral en el comedor.",
+      "Acceso trasero con mosquitero y cierres dobles.",
     ],
     stock: 5,
   },
