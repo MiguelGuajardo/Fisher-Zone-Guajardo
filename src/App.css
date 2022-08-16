@@ -1,3 +1,8 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .Sections {
   display: flex;
   margin-top: 100px;
@@ -5,4 +10,38 @@
 
 .SectionItemListContainer {
   width: 62%;
+}
+.productSlider {
+  display: flex;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  scroll-padding: 25px;
+  column-gap: 10px;
+}
+.itemProductSlide {
+  padding: 10px;
+  scroll-snap-align: start;
+  border-radius: 30px;
+}
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  body {
+    width: 576px;
+  }
+  .App {
+    width: 576px;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+  body {
+    width: 960px;
+  }
+  .App {
+    width: 960px;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
 }

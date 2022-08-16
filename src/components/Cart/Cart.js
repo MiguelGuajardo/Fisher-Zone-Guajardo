@@ -25,38 +25,45 @@ const Cart = () => {
           <h2>Items totales: {totalProducts}</h2>
           <h2>Total: ${totalPrice}</h2>
         </div>
-        {cartProducts !== [] &&
-          cartProducts.map((item) => (
-            <div className="checkOutDescription" key={item.id}>
-              <div>
-                <h2>Detalle de Producto</h2>
-                <div className="detailContainer">
-                  <img className="imageCheckOut" src={item.image} alt="" />
+        <div className="checkoutList">
+          {cartProducts !== [] &&
+            cartProducts.map((item) => (
+              <div className="checkOutDescription" key={item.id}>
+                <div>
+                  <h2>Detalle de Producto</h2>
+                  <div className="detailContainer">
+                    <img className="imageCheckOut" src={item.image} alt="" />
+                    <div className="alignContainer">
+                      <p className="detailFontSize">{item.name}</p>
+                      <button
+                        className="BuyButton"
+                        onClick={() => removeFromCart(item.id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="containerCenter">
                   <div className="alignContainer">
-                    <p className="detailFontSize">{item.name}</p>
-                    <button
-                      className="BuyButton"
-                      onClick={() => removeFromCart(item.id)}
-                    >
-                      Remove
-                    </button>
+                    <h2 className="detailFontSize">Cantidad</h2>
+                    <p className="detailFontSize">{item.contador}</p>
+                  </div>
+                  <div className="alignContainer">
+                    <h2 className="detailFontSize">Precio</h2>
+                    <p className="detailFontSize">${item.price}</p>
+                  </div>
+                  <div className="alignContainer">
+                    <h2 className="detailFontSize">SubTotal</h2>
+                    <p className="detailFontSize">
+                      {" "}
+                      ${item.price * item.contador}
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="alignContainer">
-                <h2 className="detailFontSize">Cantidad</h2>
-                <p className="detailFontSize">{item.contador}</p>
-              </div>
-              <div className="alignContainer">
-                <h2 className="detailFontSize">Precio</h2>
-                <p className="detailFontSize">${item.price}</p>
-              </div>
-              <div className="alignContainer">
-                <h2 className="detailFontSize">SubTotal</h2>
-                <p className="detailFontSize"> ${item.price * item.contador}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+        </div>
         <Link to="/Pesca">
           <h3 className="styleAncla">Seguir Comprando</h3>
         </Link>

@@ -1,4 +1,5 @@
 .footerContainer {
+  bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -15,4 +16,19 @@
   flex-direction: column;
   align-items: center;
   width: 16rem;
+}
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .itemsFooterContainer {
+    margin-left: 10px;
+  }
+  .copyright {
+    width: 40%;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
 }

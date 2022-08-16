@@ -1,5 +1,4 @@
 .ItemContainer {
-  height: 100vh;
   margin-top: 10vh;
   padding: 0 10%;
 }
@@ -15,4 +14,10 @@
 }
 .ItemDescriptionText {
   margin-top: 1rem;
+}
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .ItemContainer {
+    margin-top: 200px;
+  }
 }

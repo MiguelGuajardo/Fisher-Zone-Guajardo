@@ -4,6 +4,9 @@
   flex-direction: column;
   margin-left: 5rem;
 }
+.containerCenter {
+  display: flex;
+}
 .checkOutTitles {
   display: flex;
   justify-content: space-around;
@@ -12,7 +15,6 @@
 .checkOutDescription {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   margin: 10px 0;
   border: 1px solid #000;
 }
@@ -42,4 +44,30 @@
   align-items: center;
   margin: 5% 0;
   gap: 3rem;
+}
+.checkoutList {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  height: 673px;
+}
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .detailContainer {
+    flex-direction: column;
+  }
+  .checkOutDescription {
+    flex-direction: column;
+  }
+  .containerCenter {
+    flex-direction: row;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
+  .checkOutDescription {
+    justify-content: space-around;
+  }
 }

@@ -1,11 +1,20 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  list-style: none;
-}
 .NavBarList {
   background-color: #303030;
+  position: absolute;
+  width: 100%;
+  z-index: 10000;
+}
+.btnHamburger {
+  color: #000;
+  background: coral;
+  border-radius: 9px;
+  padding: 10px;
+}
+.btnHamburgerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 .List {
   display: flex;
@@ -67,4 +76,67 @@
 }
 .NavItem:hover .ListItems li {
   animation: animation 0.5s forwards;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .NavBarList,
+  .NavBarListOpen {
+    width: 576px;
+  }
+  .List {
+    flex-direction: column;
+  }
+  .NavBarList {
+    background-color: #303030;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+  }
+  .NavBarListOpen {
+    background-color: #303030;
+    position: absolute;
+    z-index: 10000;
+    display: block;
+  }
+  .NavItem {
+    font-size: 3vh;
+  }
+  .NavItem svg {
+    display: none;
+  }
+  .ListItems {
+    display: none;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+  .NavBarList {
+    width: 576px;
+  }
+  .btnHamburger {
+    display: none;
+  }
+  .NavBarList {
+    z-index: 10001;
+    width: 960px;
+  }
+  .TopBar {
+    width: 100%;
+  }
+  .List {
+    flex-wrap: wrap;
+  }
+  .ListItems {
+    display: none;
+  }
+  .NavItem svg {
+    display: none;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
+  .btnHamburger {
+    display: none;
+  }
 }

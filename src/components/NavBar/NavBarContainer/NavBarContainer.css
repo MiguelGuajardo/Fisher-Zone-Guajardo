@@ -1,9 +1,3 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  list-style: none;
-}
 .NavbarContainer {
   display: flex;
   align-items: center;
@@ -13,7 +7,6 @@
 }
 .sectionLogo {
   display: flex;
-  width: 220px;
   align-items: center;
   font-size: 24px;
 }
@@ -28,7 +21,7 @@
 .sectionCuenta {
   position: relative;
   display: inline-block;
-  z-index: 2;
+  z-index: 10001;
   height: 45px;
   width: 200px;
   border-top-left-radius: 4px;
@@ -81,4 +74,32 @@
 }
 .NavbarContainer * {
   text-decoration: none;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .NavbarContainer {
+    min-height: 200px;
+    width: 100%;
+    margin: 0;
+    justify-content: space-around;
+  }
+  .NameLogo {
+    display: none;
+  }
+  .SectionSearch {
+    display: none;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+  .NavbarContainer {
+    width: 100%;
+  }
+  .SectionSearch {
+    display: none;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
 }

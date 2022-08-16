@@ -1,9 +1,3 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  list-style: none;
-}
 .TopBar {
   display: flex;
   justify-content: center;
@@ -73,4 +67,19 @@
   40% {
     transform: rotate(-15deg);
   }
+}
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .TopBar {
+    width: 576px;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+  .TopBar {
+    width: 960px;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
 }

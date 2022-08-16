@@ -23,7 +23,7 @@ const Footer = () => {
           </Link>
         </ul>
       </div>
-      <div>
+      <div className="copyright">
         <h2>© 2022 FisherZone All Rights Reserved by Miguel Angel Guajardo</h2>
       </div>
     </div>

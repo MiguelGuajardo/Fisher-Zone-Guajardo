@@ -10,7 +10,7 @@
   background-color: #f4f4f4;
   margin: 1% auto;
   padding: 20px;
-  width: 30%;
+
   border-radius: 12px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 17);
 }
@@ -38,4 +38,23 @@
 .questionAccount:hover,
 .questionAccount:focus {
   color: coral;
+}
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .formContent {
+    width: 80%;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+  .formContent {
+    width: 60%;
+    margin: 14% auto 4%;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
+  .formContent {
+    width: 30%;
+  }
 }

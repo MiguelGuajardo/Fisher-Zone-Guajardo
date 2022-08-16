@@ -40,3 +40,20 @@
   justify-content: center;
   align-content: center;
 }
+/*Mobile*/
+@media only screen and (max-width: 576px) {
+  .TitleDescription {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+  }
+  .BuyCard {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 577px) and (max-width: 960px) {
+}
+/*Desktop*/
+@media only screen and (min-width: 961px) {
+}
