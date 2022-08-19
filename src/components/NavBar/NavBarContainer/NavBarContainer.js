@@ -1,5 +1,4 @@
 import "./NavBarContainer.css";
-import fisherZoneLogo from "../../../img/fishingZoneLogo.jpg";
 import TextField from "@mui/material/TextField";
 import PersonIcon from "@mui/icons-material/Person";
 import CartWidget from "../../CartWidget/CartWidget";
@@ -11,7 +10,7 @@ export default function NavbarContainer() {
         <div className="sectionLogo orderList">
           <img
             className="fishingZoneLogo"
-            src={fisherZoneLogo}
+            src="/assets/fishingZoneLogo.jpg"
             alt="Logo Fishing Zone"
           />
 

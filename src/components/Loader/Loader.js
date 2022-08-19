@@ -1,9 +1,9 @@
 import "./Loader.css";
-import Spinner from "../../img/spinner.gif";
+
 const Loader = () => {
   return (
     <div className="spinnerContainer">
-      <img src={Spinner} alt="" />
+      <img src="assets/spinner.gif" alt="" />
     </div>
   );
 };

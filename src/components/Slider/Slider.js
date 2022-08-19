@@ -1,13 +1,11 @@
 import "./Slider.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Slide1 from "../../img/Slide1.webp";
-import Slide2 from "../../img/Slide2.webp";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 const slideData = [
-  { image: Slide1, heading: "Pesca", category: "Pesca" },
-  { image: Slide2, heading: "Camping", category: "Camping" },
+  { image: "assets/Slide1.webp", heading: "Pesca", category: "Pesca" },
+  { image: "assets/Slide2.webp", heading: "Camping", category: "Camping" },
 ];
 
 //import { Link } from "react-router-dom";
