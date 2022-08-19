@@ -1,11 +1,15 @@
 import "./ItemDescriptionText.css";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
-import RenderItemDescriptionText from "../../RenderItemDescriptionText/RenderItemDescriptionText";
-const ItemDescriptionText = () => {
+const ItemDescriptionText = ({ data }) => {
+  console.log(data);
   return (
     <>
       <ul className="ListDescriptionText">
-        <RenderItemDescriptionText />
+        <li className="Description">
+          <ArrowRightIcon fontSize="large" />
+          <p className="TextDescription">{data} </p>
+        </li>
       </ul>
     </>
   );

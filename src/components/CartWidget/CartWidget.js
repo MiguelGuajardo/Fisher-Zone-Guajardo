@@ -81,7 +81,11 @@ export default function BasicMenu() {
             const { id, name, price, image, contador } = product;
             return (
               <div className="item-cart-product" key={id}>
-                <img className="imageCartItem" src={image} alt="" />
+                <img
+                  className="imageCartItem"
+                  src={`/assets/${image}`}
+                  alt=""
+                />
                 <div className="cart-product__details">
                   <p className="sizeDetailItem">{name}</p>
                   <p className="sizeDetailItem">${price * contador}</p>

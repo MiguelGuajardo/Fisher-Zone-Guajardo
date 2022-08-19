@@ -2,7 +2,7 @@
   background-color: #303030;
   position: absolute;
   width: 100%;
-  z-index: 10000;
+  z-index: 1;
 }
 .btnHamburger {
   color: #000;

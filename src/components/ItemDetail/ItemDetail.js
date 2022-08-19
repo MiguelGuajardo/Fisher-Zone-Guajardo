@@ -3,7 +3,7 @@ import ItemImageContainer from "./ItemImageContainer/ItemImageContainer";
 import ItemDescription from "./ItemDescription/ItemDescription";
 import ItemDescriptionText from "./ItemDescriptionText/ItemDescriptionText";
 const ItemDetail = ({ data }) => {
-  const { name, image } = data;
+  const { name, image, description } = data;
   return (
     <div className="ItemContainer">
       <div className="ItemDetail">
@@ -13,7 +13,7 @@ const ItemDetail = ({ data }) => {
         </div>
       </div>
       <div className="ItemDescriptionText">
-        <ItemDescriptionText />
+        <ItemDescriptionText data={description} />
       </div>
     </div>
   );

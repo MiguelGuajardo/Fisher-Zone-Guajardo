@@ -32,7 +32,11 @@ const Cart = () => {
                 <div>
                   <h2>Detalle de Producto</h2>
                   <div className="detailContainer">
-                    <img className="imageCheckOut" src={item.image} alt="" />
+                    <img
+                      className="imageCheckOut"
+                      src={`/assets/${item.image}`}
+                      alt=""
+                    />
                     <div className="alignContainer">
                       <p className="detailFontSize">{item.name}</p>
                       <button

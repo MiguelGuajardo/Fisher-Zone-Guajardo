@@ -1,44 +1,36 @@
 import { useState, useEffect } from "react";
-import products from "../../Utils/products.mock";
+
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import db from "../../firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function ItemDetailContainer() {
   const [productData, setProductData] = useState([]);
-  const [ProductFilterId, setProductFilterId] = useState([]);
-
   const { id } = useParams();
-  const getProduct = new Promise((resolve, reject) => {
-    resolve(products);
-  });
 
+  const getProduct = async () => {
+    const docRef = doc(db, "Productos", id);
+    const docSnapshot = await getDoc(docRef);
+    let product = docSnapshot.data();
+    product.id = docSnapshot.id;
+    return product;
+  };
   useEffect(() => {
-    getProduct
-      .then((res) => {
-        setProductData(res);
-      })
-      .catch((error) => {
-        console.log("La llamada fallo");
-      })
-      .finally(() => {});
-  }, []);
-  useEffect(() => {
-    FilterById();
-  });
-  const FilterById = () => {
+    getProduct().then((res) => {
+      setProductData(res);
+    });
+  }, [id]);
+  /*const FilterById = () => {
     productData.some((product) => {
       if (product.id == id) {
         setProductFilterId(product);
       }
     });
-  };
+  };*/
   return (
     <div>
-      {ProductFilterId ? (
-        <ItemDetail data={ProductFilterId}></ItemDetail>
-      ) : (
-        <div>Cargando...</div>
-      )}
+      <ItemDetail data={productData}></ItemDetail>
     </div>
   );
 }
