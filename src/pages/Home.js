@@ -31,8 +31,8 @@ const Home = () => {
         {productos.map((product) => {
           return (
             <>
-              <div className="itemProductSlide">
-                <ItemProduct key={product.id} data={product} />
+              <div className="itemProductSlide" key={product.id}>
+                <ItemProduct data={product} />
               </div>
             </>
           );

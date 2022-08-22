@@ -12,11 +12,11 @@ import CañaSpinitTornado from "../img/CañaSpinitTornado.png";
 //----------REELS
 import YukiStarSurf from "../img/YukiStarSurf.jpeg";
 import OkumaCeymarCxt65 from "../img/OkumaCeymarCxt65.jpg";
-import BobinaNylonMasterguilZ4 from "../img/BobinaNylonMasterguilZ4.jpg";
 import ReelRotativoHuevitoBanax from "../img/ReelRotativoHuevitoBanax.jpg";
-//----------ACCESORIOS PESCA
-import BobinaNylonMasterguilZ5TanzaMonofilamento from "../img/BobinaNylonMasterguilZ5TanzaMonofilamento.jpg";
 import ReelFrontalShimanoSiennaFg4000 from "../img/ReelFrontalShimanoSiennaFg4000.jpg";
+//----------ACCESORIOS PESCA
+import BobinaNylonMasterguilZ4 from "../img/BobinaNylonMasterguilZ4.jpg";
+import BobinaNylonMasterguilZ5TanzaMonofilamento from "../img/BobinaNylonMasterguilZ5TanzaMonofilamento.jpg";
 import CajadePescaColganteFlounder from "../img/CajadePescaColganteFlounder.jpg";
 //----------MOCHILAS
 import MochilaBambooAdventure70Lts from "../img/MochilaBambooAdventure70Lts.jpg";
