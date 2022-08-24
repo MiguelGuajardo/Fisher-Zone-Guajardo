@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detail from "./pages/Detail";
-import Contacto from "./pages/Contact";
+import Contacto from "./pages/Contacto";
 import Checkout from "./pages/Checkout";
 import Error404 from "./pages/Error404";
 import CartProvider from "./context/CartContext";

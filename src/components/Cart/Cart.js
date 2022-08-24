@@ -34,7 +34,6 @@ const Cart = () => {
   };
   const SubmitData = (e) => {
     e.preventDefault();
-    console.log("orden para enviar: ", { ...order, buyer: formData });
     pushData({ ...order, buyer: formData });
   };
 

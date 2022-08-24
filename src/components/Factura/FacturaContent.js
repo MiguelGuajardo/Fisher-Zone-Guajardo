@@ -51,7 +51,7 @@ const FacturaContent = ({ data, idParam }) => {
               <tr>
                 <th>Cant.</th>
                 <th>Descripcion</th>
-                <th>Precio Unitario</th>
+                <th className="column">Precio Unitario</th>
                 <th>Importe</th>
               </tr>
             </thead>
@@ -61,8 +61,8 @@ const FacturaContent = ({ data, idParam }) => {
                   <tr key={item.id}>
                     <td>{item.contador}</td>
                     <td>{item.name}</td>
-                    <td>{item.price}</td>
-                    <td>{item.price * item.contador}</td>
+                    <td className="column">${item.price}</td>
+                    <td>${item.price * item.contador}</td>
                   </tr>
                 );
               })}

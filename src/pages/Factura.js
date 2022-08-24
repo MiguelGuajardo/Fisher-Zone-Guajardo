@@ -20,7 +20,6 @@ const Factura = () => {
     });
   }, [idOrden]);
 
-  console.log(productData);
   return (
     <div className="invoiceContainer">
       {productData && <FacturaContent idParam={idOrden} data={productData} />}

@@ -1,23 +1,37 @@
 import "./Account.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import db from "../../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
 const Account = () => {
+  const [success, setSuccess] = useState(); // eslint-disable-next-line
+  const [user, setUser] = useState({
+    userRegister: {},
+    userLogin: {},
+  });
+  const [formDataRegister, setFormDataRegister] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleChange = (e) => {
+    setFormDataRegister({
+      ...formDataRegister,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const SubmitDataUser = (e) => {
+    e.preventDefault();
+    pushData({ ...user, userRegister: formDataRegister });
+  };
+  const pushData = async (newOder) => {
+    const collectionOrder = collection(db, "Users");
+    const orderDoc = await addDoc(collectionOrder, newOder);
+    setSuccess(orderDoc.id);
+  };
   const { Account } = useParams();
-  console.log(Account);
-  const AccountArray = [
-    {
-      id: 1,
-      email: "Email",
-      password: "Contraseña",
-      resetPassword: "¿Olvidaste tu contraseña?",
-      nameBtn: "Iniciar sesión",
-      question: "¿No tenes cuenta aún?",
-      buttonCreateAccount: "Crear cuenta",
-    },
-    {
-      id: 2,
-    },
-  ];
   if (Account === "Login") {
     return (
       <div className="accountContainer">
@@ -62,32 +76,16 @@ const Account = () => {
     return (
       <div className="accountContainer">
         <div className="formContent">
-          <form className="form">
-            <div className="formGroup">
-              <label>Nombre Completo</label>
-              <input
-                className="inputForm"
-                type="text"
-                name="CompleteName"
-                placeholder="Nombre Completo"
-              ></input>
-            </div>
+          <form onSubmit={SubmitDataUser} className="form">
             <div className="formGroup">
               <label>Email</label>
               <input
                 className="inputForm"
                 type="text"
-                name="Email"
+                name="email"
+                onChange={handleChange}
+                value={formDataRegister.email}
                 placeholder="Email"
-              ></input>
-            </div>
-            <div className="formGroup">
-              <label>Teléfono</label>
-              <input
-                className="inputForm"
-                type="number"
-                name="Teléfono"
-                placeholder="ej: 1123445567"
               ></input>
             </div>
             <div className="formGroup">
@@ -95,6 +93,9 @@ const Account = () => {
               <input
                 className="inputForm"
                 type="password"
+                name="password"
+                onChange={handleChange}
+                value={formDataRegister.password}
                 placeholder="Contraseña"
               ></input>
             </div>
@@ -103,6 +104,9 @@ const Account = () => {
               <input
                 className="inputForm"
                 type="password"
+                name="confirmPassword"
+                onChange={handleChange}
+                value={formDataRegister.confirmPassword}
                 placeholder="Contraseña"
               ></input>
               <Link to="">
@@ -112,7 +116,9 @@ const Account = () => {
               </Link>
             </div>
             <div className="formGroup">
-              <button className="ButtonVerMas">Crear Cuenta</button>
+              <button type="submit" className="ButtonVerMas">
+                Crear Cuenta
+              </button>
             </div>
           </form>
           <p>
