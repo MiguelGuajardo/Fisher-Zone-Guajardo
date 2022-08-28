@@ -9,8 +9,14 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 export default function BasicMenu() {
-  const { cartProducts, removeFromCart, clear, totalProducts } =
-    useContext(CartContext);
+  const {
+    cartProducts,
+    removeFromCart,
+    clear,
+    totalProducts,
+    removeToCart,
+    removeAllCart,
+  } = useContext(CartContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -91,13 +97,24 @@ export default function BasicMenu() {
                   <p className="sizeDetailItem">${price * contador}</p>
                   <p className="sizeDetailItem">CANTIDAD = {contador}</p>
                 </div>
-                <button onClick={() => removeFromCart(id)}>
+                <button
+                  onClick={() => {
+                    removeFromCart(id);
+                    removeToCart();
+                  }}
+                >
                   <DeleteIcon className="deleteItem" />
                 </button>
               </div>
             );
           })}
-          <button className="BuyButton" onClick={() => clear()}>
+          <button
+            className="BuyButton"
+            onClick={() => {
+              clear();
+              removeAllCart();
+            }}
+          >
             Remove All
           </button>
           <Link to="/Cart">

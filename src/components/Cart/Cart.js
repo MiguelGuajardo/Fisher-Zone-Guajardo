@@ -5,9 +5,15 @@ import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal";
 import db from "../../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+
 const Cart = () => {
-  const { cartProducts, removeFromCart, totalProducts, totalPrice } =
-    useContext(CartContext);
+  const {
+    cartProducts,
+    removeFromCart,
+    totalProducts,
+    totalPrice,
+    removeToCart,
+  } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
   const [success, setSuccess] = useState();
   const [order, setOrder] = useState({
@@ -42,6 +48,7 @@ const Cart = () => {
     const orderDoc = await addDoc(collectionOrder, newOder);
     setSuccess(orderDoc.id);
   };
+
   if (cartProducts.length === 0) {
     return (
       <div className="checkOutContainer">
@@ -77,7 +84,10 @@ const Cart = () => {
                       <p className="detailFontSize">{item.name}</p>
                       <button
                         className="BuyButton"
-                        onClick={() => removeFromCart(item.id)}
+                        onClick={() => {
+                          removeFromCart(item.id);
+                          removeToCart();
+                        }}
                       >
                         Remove
                       </button>

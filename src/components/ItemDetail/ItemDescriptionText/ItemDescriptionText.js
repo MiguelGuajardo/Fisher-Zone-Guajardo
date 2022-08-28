@@ -22,9 +22,9 @@ const ItemDescriptionText = () => {
   return (
     <>
       <ul className="ListDescriptionText">
-        {text.map((text) => {
+        {text.map((text, index) => {
           return (
-            <li className="Description">
+            <li className="Description" key={index}>
               <ArrowRightIcon fontSize="large" />
               <p className="TextDescription">{text} </p>
             </li>

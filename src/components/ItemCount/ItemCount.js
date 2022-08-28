@@ -2,7 +2,7 @@ import "./ItemCount.css";
 import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 const ItemCount = ({ stock, count, setQtySelected, productData }) => {
-  const { addProduct } = useContext(CartContext);
+  const { addProduct, addToCart } = useContext(CartContext);
   const [contador, setContador] = useState(0);
 
   const addNumber = () => {
@@ -19,6 +19,7 @@ const ItemCount = ({ stock, count, setQtySelected, productData }) => {
     setQtySelected(contador);
     addProduct({ ...productData, contador });
   };
+
   return (
     <>
       <div className="ItemCount">
@@ -30,7 +31,13 @@ const ItemCount = ({ stock, count, setQtySelected, productData }) => {
           +
         </button>
       </div>
-      <button className="BuyButton" onClick={onAdd}>
+      <button
+        className="BuyButton"
+        onClick={() => {
+          onAdd();
+          addToCart();
+        }}
+      >
         AGREGAR AL CARRITO
       </button>
     </>

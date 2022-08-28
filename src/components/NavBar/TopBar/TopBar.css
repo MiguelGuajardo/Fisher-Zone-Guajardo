@@ -71,13 +71,13 @@
 /*Mobile*/
 @media only screen and (max-width: 576px) {
   .TopBar {
-    width: 576px;
+    width: 100%;
   }
 }
 /*Tablet*/
 @media only screen and (min-width: 577px) and (max-width: 960px) {
   .TopBar {
-    width: 960px;
+    width: 100%;
   }
 }
 /*Desktop*/

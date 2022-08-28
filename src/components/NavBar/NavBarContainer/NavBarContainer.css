@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
   margin: 0 2%;
 }
 .sectionLogo {
@@ -11,8 +10,8 @@
   font-size: 24px;
 }
 .fishingZoneLogo {
-  width: 68px;
-  height: 68px;
+  width: 4.2rem;
+  height: 4.2rem;
 }
 .DesplegarLista ul {
   list-style: none;
@@ -33,7 +32,7 @@
 }
 .ListaCuenta {
   position: absolute;
-  width: 200px;
+  width: 13rem;
   color: #000;
 }
 .ListaCuenta li {
@@ -79,7 +78,6 @@
 /*Mobile*/
 @media only screen and (max-width: 576px) {
   .NavbarContainer {
-    min-height: 200px;
     width: 100%;
     margin: 0;
     justify-content: space-around;
@@ -93,9 +91,6 @@
 }
 /*Tablet*/
 @media only screen and (min-width: 577px) and (max-width: 960px) {
-  .NavbarContainer {
-    width: 100%;
-  }
   .SectionSearch {
     display: none;
   }

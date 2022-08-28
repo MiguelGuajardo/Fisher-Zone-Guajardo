@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import Swal from "sweetalert2";
+
 const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
@@ -40,6 +42,58 @@ const CartProvider = ({ children }) => {
       totalPrice - contadorItem[0].contador * contadorItem[0].price
     );
   };
+  const addToCart = () => {
+    Swal.fire({
+      html: `<span>Producto agregado al carrito</span>`,
+      showConfirmButton: false,
+      width: `90%`,
+      timer: 4000,
+      timerProgressBar: true,
+      backdrop: false,
+      position: `top`,
+      background: `green`,
+      color: `#fff`,
+    });
+  };
+  const removeToCart = () => {
+    Swal.fire({
+      html: `<span>Producto eliminado del carrito</span>`,
+      showConfirmButton: false,
+      width: `90%`,
+      timer: 4000,
+      timerProgressBar: true,
+      backdrop: false,
+      position: `top`,
+      background: `green`,
+      color: `#fff`,
+    });
+  };
+  const removeAllCart = () => {
+    Swal.fire({
+      html: `<span>Se han eliminados todos los productos del carrito</span>`,
+      showConfirmButton: false,
+      width: `90%`,
+      timer: 4000,
+      timerProgressBar: true,
+      backdrop: false,
+      position: `top`,
+      background: `green`,
+      color: `#fff`,
+    });
+  };
+  const sendMessage = () => {
+    Swal.fire({
+      html: `<span>Mensaje enviado correctamente</span>`,
+      showConfirmButton: false,
+      width: `90%`,
+      timer: 4000,
+      timerProgressBar: true,
+      backdrop: false,
+      position: `top`,
+      background: `green`,
+      color: `#fff`,
+    });
+  };
   const data = {
     cartProducts,
     setCartProducts,
@@ -49,6 +103,10 @@ const CartProvider = ({ children }) => {
     totalProducts,
     setTotalPrice,
     totalPrice,
+    addToCart,
+    removeToCart,
+    removeAllCart,
+    sendMessage,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

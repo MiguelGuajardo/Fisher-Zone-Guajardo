@@ -2,6 +2,7 @@ import "./ItemProduct.css";
 import { Link } from "react-router-dom";
 const ItemProduct = ({ data }) => {
   const { name, price, image, id, category } = data;
+
   return (
     <div className="ItemProduct">
       <div className="flip-card-inner">

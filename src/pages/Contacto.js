@@ -20,7 +20,7 @@ const Contacto = () => {
     getMessage().then((res) => {
       setListMessages(res);
     });
-  }, []);
+  }, [listMessages]);
   return (
     <>
       <div className="Sections contactContainer">
@@ -29,9 +29,9 @@ const Contacto = () => {
       <div className="questionContainer">
         <h2>Ultimas Preguntas</h2>
         <div className="questionList">
-          {listMessages.map((message) => {
+          {listMessages.map((message, index) => {
             return (
-              <div className="questionItem">
+              <div className="questionItem" key={index}>
                 <div>
                   <PersonIcon />
                 </div>

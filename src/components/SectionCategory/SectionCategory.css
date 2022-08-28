@@ -1,6 +1,5 @@
 .SectionCategory {
   display: flex;
-  width: 18%;
   flex-direction: column;
   align-items: flex-start;
   padding-left: 180px;
@@ -45,7 +44,6 @@ ul.ItemListCategory {
     margin-top: 90px;
   }
   .SectionCategory {
-    width: 18%;
     padding-left: 180px;
   }
   .SectionItemListContainer {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Contact.css";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -6,8 +6,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import db from "../../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+import { CartContext } from "../../context/CartContext";
 
 const Contact = () => {
+  const { sendMessage } = useContext(CartContext);
   const [success, setSuccess] = useState(); // eslint-disable-next-line
   const [mensaje, setMensaje] = useState({
     mensajeUser: {},
@@ -104,7 +106,11 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="formGroup">
-            <button type="submit" className="ButtonVerMas">
+            <button
+              onClick={() => sendMessage()}
+              type="submit"
+              className="ButtonVerMas"
+            >
               Enviar
             </button>
           </div>
