@@ -33,6 +33,13 @@ npm install @mui/icons-material
 
 ```
 
+### SweetAlert2
+
+```
+npm install sweetalert2
+
+```
+
 ## Licencia
 
 All rights reserved to Miguel Angel Guajardo
