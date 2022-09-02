@@ -21,13 +21,6 @@ export default function ItemDetailContainer() {
       setProductData(res);
     });
   }, [id]);
-  /*const FilterById = () => {
-    productData.some((product) => {
-      if (product.id == id) {
-        setProductFilterId(product);
-      }
-    });
-  };*/
   return (
     <div>
       <ItemDetail data={productData}></ItemDetail>
