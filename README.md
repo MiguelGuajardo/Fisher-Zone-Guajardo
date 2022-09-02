@@ -4,7 +4,7 @@ Fisher Zone es la plataforma que te permite realizar compras de Artículos de pe
 
 ## Navegabilidad
 
-![Gif-Navegabilidad](https://user-images.githubusercontent.com/96299779/182932468-9b4a26a9-083c-4dbe-aca5-3242cf4e1c30.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/96299779/188192692-3d98f2dd-b6a4-4314-89cd-b8f729fd6c72.gif)
 
 ## Instalación
 
