@@ -39,6 +39,13 @@ npm install @mui/icons-material
 npm install sweetalert2
 
 ```
+## Instalar todas las dependencias
+
+```
+
+npm install
+
+```
 
 ## Licencia
 
